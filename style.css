@@ -356,7 +356,6 @@ html {
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
-    animation: scrollReviews 20s linear infinite alternate;
 }
 
 /* КАРТОЧКИ */
