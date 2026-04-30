@@ -1,3 +1,7 @@
+ html, body {
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     font-family: Arial;
@@ -104,7 +108,8 @@ body {
 
 /* карточка */
 .review-card {
-    min-width: 350px;
+    min-width: 280px; /* 👈 фиксированная ширина */
+    max-width: 280px;
     background: white;
     padding: 20px;
     border-radius: 12px;
@@ -333,6 +338,12 @@ html {
     gap: 10px;
 }
 
+.reviews-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
 /* ОБЁРТКА */
 .review-carousel-wrap {
     width: 100%;
@@ -343,22 +354,31 @@ html {
 .review-carousel {
     display: flex;
     gap: 20px;
-    width: max-content;
+    flex-wrap: wrap;
+    justify-content: center;
     animation: scrollReviews 20s linear infinite alternate;
 }
 
 /* КАРТОЧКИ */
 .review-card {
-    min-width: 280px; /* 👈 фиксированная ширина */
-    max-width: 280px;
+    min-width: 350px;
     background: white;
     padding: 20px;
     border-radius: 12px;
+
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.6s;
 
     display: flex;
     gap: 15px;
 
     align-items: flex-start;
+}
+
+.review-card.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* 💥 ВАЖНО: это фиксит текст */
@@ -656,6 +676,7 @@ html {
     }
 
 }
+
 @media (max-width: 768px) {
 
     .review-carousel {
