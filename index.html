@@ -215,6 +215,25 @@
     </div>
 </div>
 
+<script>
+    const reviews = document.querySelectorAll(".review-card");
+
+function showReviewsOnScroll() {
+    const trigger = window.innerHeight * 0.85;
+
+    reviews.forEach(card => {
+        const top = card.getBoundingClientRect().top;
+
+        if (top < trigger) {
+            card.classList.add("show");
+        }
+    });
+}
+
+window.addEventListener("scroll", showReviewsOnScroll);
+showReviewsOnScroll();
+</script>
+    
 <!-- ФОРМА -->
 <section class="order" id="order">
 
