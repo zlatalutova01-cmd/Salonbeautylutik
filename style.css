@@ -655,3 +655,20 @@ html {
     }
 
 }
+@media (max-width: 768px) {
+
+    .review-carousel {
+        gap: 0; /* убираем промежутки */
+    }
+
+    .review-card {
+        min-width: 100vw;  /* 💥 ВСЯ ширина экрана */
+        max-width: 100vw;
+        border-radius: 0;  /* как на всю ширину */
+    }
+
+    .review-carousel-wrap {
+        overflow: hidden;
+    }
+
+}
