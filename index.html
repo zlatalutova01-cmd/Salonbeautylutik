@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Салон покраски волос</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="top-bar">
+
+    <div class="logo">Lutik</div>
+
+    <div class="socials">
+
+        <a href="https://instagram.com" target="_blank">
+            <img src="img/insta.jpg">
+        </a>
+
+        <a href="https://vk.com" target="_blank">
+            <img src="img/vk.png">
+        </a>
+
+        <a href="https://t.me" target="_blank">
+            <img src="img/tg.png">
+        </a>
+
+    </div>
+
+</div>
+
+<nav class="menu">
+
+    <a href="#services">Услуги</a>
+    <a href="#team">Видео</a>
+    <a href="#contacts">Контакты</a>
+
+</nav>
+
+<div class="header">
+    
+    <h1>Мы лучшие мастера по покраске волос!</h1>
+    <p>Качественные услуги с использованием профессиональных материалов, индивидуальный подход к каждому клиенту, </p>
+        <p>опытные мастера с многолетним стажем, гарантия результата и забота о здоровье ваших волос</p>
+    <a href="#order" class="button">Записаться</a>
+</div>
+
+<div class="section">
+    <h2>🔥 Мои модели</h2>
+
+    <div class="gallery">
+
+        <img src="img/model1.jpg" onclick="openImage(this)">
+        <img src="img/model2.jpg" onclick="openImage(this)">
+        <img src="img/model3.jpg" onclick="openImage(this)">
+        <img src="img/model4.jpg" onclick="openImage(this)">
+        <img src="img/model5.jpg" onclick="openImage(this)">
+        <img src="img/model6.jpg" onclick="openImage(this)">
+
+    </div>
+</div>
+
+<!-- МОДАЛКА -->
+<div class="modal" id="modal" onclick="closeImage()">
+    <img id="modal-img">
+</div>
+
+<div class="section" id="services">
+    <h2>Работы</h2>
+
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9">
+            <h3>Окрашивание</h3>
+            <p>1500₽</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
+            <h3>Балаяж</h3>
+            <p>2500₽</p>
+        </div>
+    </div>
+</div>
+
+<div class="section" id="team">
+
+    <h2>🎥 Наши работы в процессе</h2>
+
+    <div class="video-row">
+
+        <div class="video-card">
+            <video src="video/vid1.mp4" controls></video>
+            <p>Блонд окрашивание</p>
+        </div>
+
+        <div class="video-card">
+            <video src="video/vid2.mp4" controls></video>
+            <p>Рыжий цвет</p>
+        </div>
+
+        <div class="video-card">
+            <video src="video/vid3.mp4" controls></video>
+            <p>Балаяж</p>
+        </div>
+
+        <div class="video-card">
+            <video src="video/vid4.mp4" controls></video>
+            <p>Тонирование</p>
+        </div>
+
+        <div class="video-card">
+            <video src="video/vid5.mp4" controls></video>
+            <p>Мелирование</p>
+        </div>
+
+        <div class="video-card">
+            <video src="video/vid6.mp4" controls></video>
+            <p>Колорирование</p>
+        </div>
+
+        <div class="video-card">
+            <video src="video/vid7.mp4" controls></video>
+            <p>Светлый оттенок</p>
+        </div>
+
+        <div class="video-card">
+            <video src="video/vid8.mp4" controls></video>
+            <p>Рыжий цвет</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="review-carousel">
+
+    <!-- ОРИГИНАЛ -->
+    <div class="review-card">
+        <img src="img/review1.jpg">
+        <div class="review-info">
+            <strong>Марина</strong>
+            <p>Долго искала хорошего мастера и наконец нашла. </p>
+            <p>Окрашивание получилось очень натуральным, цвет подобрали идеально под мой тип внешности. </p>
+            <p>Волосы после процедуры мягкие, блестящие и живые, без повреждений.</p>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <img src="img/review2.jpg">
+        <div class="review-info">
+            <strong>Анна</strong>
+            <p>Очень понравился сервис в салоне. </p>
+            <p>Мастер внимательно выслушал мои пожелания и предложил лучший вариант окрашивания. </p> 
+            <p>Результат превзошёл ожидания, цвет держится долго и выглядит дорого.</p>  
+        </div>
+    </div>
+
+    <div class="review-card">
+        <img src="img/review3.jpg">
+        <div class="review-info">
+            <strong>Ольга</strong>
+            <p>Записалась впервые и немного переживала, но всё прошло идеально.</p>
+            <p>Атмосфера уютная, персонал доброжелательный, а результат окрашивания просто шикарный. </p>  
+            <p>Волосы выглядят ухоженно и здорово.</p>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <img src="img/review4.jpg">
+        <div class="review-info">
+            <strong>Елена</strong>
+            <p>Очень профессиональная работа. Мне сделали сложное окрашивание, и всё получилось аккуратно и без повреждений. </p>
+            <p>Цвет плавный, переходы мягкие, волосы стали выглядеть намного лучше.</p>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <img src="img/review5.jpg">
+        <div class="review-info">
+            <strong>Ирина</strong>
+            <p>Хочу отметить высокий уровень сервиса и внимательность мастера.</p>
+            <p>Он учёл все мои пожелания и подобрал идеальный оттенок.</p>
+            <p>После окрашивания волосы стали гладкими и блестящими.</p>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <img src="img/review6.jpg">
+        <div class="review-info">
+            <strong>Дарья</strong>
+            <p>Очень довольна результатом. </p>
+             <p>Цвет получился ровным и насыщенным, как я и хотела. </p>
+             <p>Процедура прошла комфортно, без спешки, и волосы после неё выглядят просто отлично.</p>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <img src="img/review7.jpg">
+        <div class="review-info">
+            <strong>Светлана</strong>
+            <p>Салон оставил только положительные впечатления.</p>
+            <p>Мастер профессионал своего дела, всё объяснил и сделал максимально аккуратно.</p>
+            <p>Волосы стали мягкими и приобрели красивый оттенок.</p>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <img src="img/review8.jpg">
+        <div class="review-info">
+            <strong>Анастасия</strong>
+            <p>Очень понравилось окрашивание, результат выглядит дорого и естественно. </p>
+            <p>Цвет подобрали идеально, волосы не испортились, наоборот стали более ухоженными и блестящими.</p>
+        </div>
+    </div>
+</div>
+
+<!-- ФОРМА -->
+<section class="order" id="order">
+
+    <div class="order-box">
+        <h3>Оставить заявку</h3>
+
+        <input type="text" id="name" placeholder="Ваше имя">
+        <input type="tel" id="phone" placeholder="+7...">
+
+        <button onclick="sendOrder()">Отправить</button>
+    </div>
+
+</section>
+
+<script>
+    function sendOrder() {
+    let nameInput = document.getElementById("name");
+    let phoneInput = document.getElementById("phone");
+
+    if (!nameInput || !phoneInput) {
+        alert("Ошибка формы");
+        return;
+    }
+
+    let name = nameInput.value.trim();
+    let phone = phoneInput.value.trim();
+
+    if (!name || !phone) {
+        alert("Заполните все поля!");
+        return;
+    }
+
+    let token = "8566600692:AAGLKYV1uxwc2b9B3XZEHR53hpZSYAOa5Bk";
+    let chat_id = "ТВОЙ_ID";
+
+    let message = `📩 Новая заявка!\n👤 Имя: ${name}\n📱 Телефон: ${phone}`;
+
+    fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            chat_id: chat_id,
+            text: message
+        })
+    })
+    .then(() => {
+        alert("Заявка отправлена!");
+        nameInput.value = "";
+        phoneInput.value = "";
+    })
+    .catch(() => {
+        alert("Ошибка отправки!");
+    });
+}
+</script>
+
+
+<div class="section">
+    <h2>📍 Мы на карте</h2>
+
+    <iframe 
+        class="map"
+        src="https://www.google.com/maps?q=Chicago&output=embed"
+        loading="lazy">
+    </iframe>
+</div>
+
+
+<button class="scroll-to-top">↑</button>
+<script>document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.querySelector(".scroll-to-top");
+
+    btn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+});</script>
+
+<footer class="section" id="contacts">
+
+    <div class="footer-inner">
+
+        <h2 class="footer-title">Lutik</h2>
+
+        <p class="footer-text">ул. Примерная, 1 • г. Чикаго</p>
+        <p class="footer-text">+7 (917) 191-74-79</p>
+
+        <div class="footer-socials">
+
+            <a href="https://www.instagram.com/lutov.s7?igsh=d285eXl4Mzk4OWd0&utm_source=qr" target="_blank">
+                <img src="img/insta.jpg" alt="">
+            </a>
+
+            <a href="https://vk.com/lyutov07" target="_blank">
+                <img src="img/vk.png" alt="">
+            </a>
+
+            <a href="https://t.me/LutovAleksander" target="_blank">
+                <img src="img/tg.png" alt="">
+            </a>
+
+        </div>
+
+        <p class="footer-copy">© 2026 Все права защищены</p>
+
+    </div>
+
+</footer>
+
+<script>
+function openImage(img) {
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+
+    modal.style.display = "flex";
+    modalImg.src = img.src;
+}
+
+function closeImage() {
+    document.getElementById("modal").style.display = "none";
+}
+</script>
+</body>
+</html>
